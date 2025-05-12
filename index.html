@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Fest 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="aniiimee.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="Anime Fest Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Программа</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#registration">Участникам</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.custom-navbar');
+  
+    window.addEventListener('scroll', function () {
+      const currentScroll = window.scrollY;
+  
+      if (currentScroll > lastScrollTop && currentScroll > 100) {
+        // Скроллим вниз — скрыть
+        navbar.classList.add('nav-hidden');
+      } else {
+        // Скроллим вверх — показать
+        navbar.classList.remove('nav-hidden');
+      }
+  
+      lastScrollTop = currentScroll;
+    });
+  </script>
+  
+
+  
+  <header class="hero text-white text-center d-flex flex-column justify-content-center align-items-center">
+    <div class="overlay"></div>
+    <div class="content text-white text-center">
+    <h1 class="display-4">Anime Fest 2025</h1>
+    <p class="lead">Добро пожаловать на самый яркий фестиваль аниме и поп-культуры!</p>
+    <a href="#registration" class="btn btn-danger btn-lg my-2">Присоединиться</a>
+    </div>
+  </header>
+
+  <section id="about" class="about-section">
+    
+    <div class="glass-box text-center">
+      <h2 class="mb-4">Программа</h2>
+      <p>Anime Fest 2025 — это пространство, где аниме, косплей и творчество объединяют всех!</p>
+  
+      <div class="row mt-4">
+        <div class="col-md-3 col-6 mb-4">
+          <img src="Cinema.png" class="about-icon mb-2" alt="Кинопоказ">
+          <h5>Кинопоказ</h5>
+          <p>Смотри лучшие аниме-фильмы вместе с фанатами.</p>
+        </div>
+        <div class="col-md-3 col-6 mb-4">
+          <img src="tableGame.png" class="about-icon mb-2" alt="Настольные игры">
+          <h5>Настольные игры</h5>
+          <p>Весёлые турниры и аниме-игры для всех возрастов.</p>
+        </div>
+        <div class="col-md-3 col-6 mb-4">
+          <img src="handmade.png" class="about-icon mb-2" alt="Фотозона">
+          <h5>Фотозоны</h5>
+          <p>Уникальные аниме-декорации для твоих фото.</p>
+        </div>
+        <div class="col-md-3 col-6 mb-4">
+          <img src="quiiz.png" class="about-icon mb-2" alt="Квиз">
+          <h5>Квиз-игра</h5>
+          <p>Проверь свои знания в мире аниме!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section class="split-section">
+    <div class="split-left">
+      <div class="split-content">
+        <h2>Покажи себя на Anime Fest!</h2>
+        <p>Прими участие в шоу-программе, мастер-классах и выставке. Твоя сцена — это Anime Fest 2025!</p>
+        <p><strong>Дата:</strong> 17 мая 2025<br><strong>Место:</strong> Актобе, Абулхайыр хана 52А</p>
+        <a href="https://api.whatsapp.com/send/?phone=77064086911&text&type=phone_number&app_absent=0&wame_ctl=1&fbclid=PAQ0xDSwKN3TlleHRuA2FlbQIxMAABp711TWe2J1eRgoa9zfdDDuZTYU_mKocX2R4oR-IDI09Cb24yCKndrco5ynU8_aem_z3xA_bhI2gebeSIQnFJ2hw" 
+   class="apply-button" 
+   target="_blank" 
+   rel="noopener noreferrer">
+   Подать заявку
+</a>
+
+      </div>
+    </div>
+  
+    <div class="split-right">
+      <img src="anigirl.png" alt="Девушка в кимоно" class="girl-animate" data-aos="fade-left" data-aos-duration="1200">
+ </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+  <!-- ИСПРАВЛЕННАЯ ВЕРСТКА БЛОКА "ДЛЯ УЧАСТНИКОВ" С РОВНЫМИ КАРТОЧКАМИ -->
+<section id="registration" class="participants-section">
+  <div class="container text-center">
+    <div class="info-box">
+      <h2 class="section-title">Для участников</h2>
+      <p class="section-subtitle">Присоединяйтесь к фестивалю как продавец, партнёр или инвестор!</p>
+
+      <div class="row justify-content-center">
+        <!-- Ярмарка -->
+        <div class="col-md-4 mb-4 d-flex">
+          <div class="participant-card w-100 d-flex flex-column justify-content-between">
+            <div>
+              <img src="market.png" class="participant-icon mb-3" alt="Ярмарка">
+              <h5>Ярмарка</h5>
+              <p>Продавайте мерч, арт, мангу и уникальные товары.</p>
+            </div>
+            <a href="#" class="participant-btn mt-3">Участвовать</a>
+          </div>
+        </div>
+
+        <!-- Партнерство -->
+        <div class="col-md-4 mb-4 d-flex">
+          <div class="participant-card w-100 d-flex flex-column justify-content-between">
+            <div>
+              <img src="partner.png" class="participant-icon mb-3" alt="Партнёрство">
+              <h5>Партнёрство</h5>
+              <p>Продвигайте свой бренд вместе с Anime Fest 2025.</p>
+            </div>
+            <a href="#" class="participant-btn mt-3">Сотрудничать</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+    
+<section id="contact" class="contact-section">
+  <div class="container text-center">
+    <div class="info-box">
+      <h2 class="section-title">Контакты</h2>
+      <p class="section-subtitle">Свяжитесь с нами для участия, сотрудничества или по любым вопросам.</p>
+
+      <div class="row justify-content-center mt-4">
+        <!-- Instagram -->
+        <div class="col-md-4 mb-4 d-flex" data-aos="fade-up">
+          <div class="contact-card w-100">
+            <h5>Instagram</h5>
+            <div class="contact-row">
+              <img src="instagram.png" alt="Instagram" class="contact-image-icon">
+              <a href="https://www.instagram.com/anime.fest.akx" target="_blank">
+                @anime.fest.akx
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="col-md-4 mb-4 d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-card w-100">
+            <h5>WhatsApp</h5>
+            <div class="contact-row">
+              <img src="whatsApp.png" alt="WhatsApp" class="contact-image-icon">
+              <a href="https://api.whatsapp.com/send/?phone=77064086911" target="_blank">
+                +7 706 408 6911
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telegram -->
+        <div class="col-md-4 mb-4 d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="contact-card w-100">
+            <h5>Telegram</h5>
+            <div class="contact-row">
+              <img src="telegram.png" alt="Telegram" class="contact-image-icon">
+              <a href="https://t.me/+Gd6zGjrcB8k2MmFi" target="_blank">
+                @animefest_akx
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  
+
+
+  <footer class="footer text-center py-3">
+    <p>&copy; 2025 Anime Fest. Все права защищены.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+</html>
