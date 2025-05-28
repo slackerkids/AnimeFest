@@ -258,7 +258,7 @@ img {
   flex-wrap: wrap;
   width: 100%;
   min-height: 950px;
-  background-image: url('pic_6.png'); /* ← путь к твоей картинке */
+  background-image: url('images/pic_6.png'); /* ← путь к твоей картинке */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; /* если нужен эффект параллакса */
