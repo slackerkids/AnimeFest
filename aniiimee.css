@@ -1,4 +1,3 @@
-
 .custom-navbar {
   background: black;
   position: sticky;
@@ -694,4 +693,169 @@ body {
     padding: 20px ;
     text-align: center;
     font-weight: 500;
+}
+
+/* Ticket Modal Styling - Glassmorphic Design */
+.modal-content {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem 2rem;
+}
+
+.modal-title {
+    color: #d84315;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem 2rem;
+}
+
+/* Form Styling */
+.form-label {
+    color: #35063d;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(211, 67, 21, 0.2);
+    border-radius: 12px;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: #d84315;
+    box-shadow: 0 0 0 0.2rem rgba(216, 67, 21, 0.2);
+    outline: none;
+}
+
+/* Modal Buttons */
+.modal .btn-primary {
+    background: linear-gradient(135deg, #d84315, #ff6f00);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.modal .btn-primary:hover {
+    background: linear-gradient(135deg, #bf360c, #e65100);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(216, 67, 21, 0.3);
+}
+
+.modal .btn-secondary {
+    background: rgba(47, 91, 151, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.modal .btn-secondary:hover {
+    background: rgba(47, 91, 151, 1);
+    transform: translateY(-2px);
+}
+
+.modal .btn-success {
+    background: linear-gradient(135deg, #35063d, #2f5b97);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.modal .btn-success:hover {
+    background: linear-gradient(135deg, #2f0536, #264a7f);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(53, 6, 61, 0.3);
+}
+
+/* QR Modal specific styling */
+#qrModal .modal-body {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+#qrModal .modal-body p {
+    color: #35063d;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+#qrModal .modal-body img {
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.modal .btn-close::before {
+    content: "×" !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #d84315 !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    line-height: 1 !important;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+    background-color: rgba(53, 6, 61, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Ticket Information Section */
+#ticketInfo {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(216, 67, 21, 0.2);
+    border-radius: 15px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#ticketInfo h6 {
+    color: #d84315;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#ticketInfo p {
+    color: #35063d;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+#ticketInfo span {
+    color: #2f5b97;
+    font-weight: 600;
 }
