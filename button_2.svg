@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#Adobe_OpacityMaskFilter);}
+	.st1{mask:url(#SVGID_1_);}
+	.st2{fill:#FF00FF;}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:#662D91;}
+</style>
+<g>
+	<g>
+		<defs>
+			<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="33" y="353" width="1014" height="374.1">
+				<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+				<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
+			</filter>
+		</defs>
+		<mask maskUnits="userSpaceOnUse" x="33" y="353" width="1014" height="374.1" id="SVGID_1_">
+			<g class="st0">
+				<image style="overflow:visible;" width="1020" height="382" xlink:href="E7A1F316.jpg"  transform="matrix(1 0 0 1 30 349)">
+				</image>
+			</g>
+		</mask>
+		<g class="st1">
+			<path class="st2" d="M860,727H220c-102.9,0-187-84.2-187-187v0c0-102.9,84.2-187,187-187H860c102.9,0,187,84.2,187,187v0
+				C1047,642.9,962.8,727,860,727z"/>
+		</g>
+	</g>
+	<g>
+		<path class="st3" d="M227.8,629.4c-50.2,0-91-40.8-91-91c0-50.2,40.8-91,91-91h624.4c50.2,0,91,40.8,91,91s-40.8,91-91,91H227.8z"
+			/>
+		<path class="st4" d="M852.2,449c49.2,0,89.5,40.3,89.5,89.5v0c0,49.2-40.3,89.5-89.5,89.5H227.8c-49.2,0-89.5-40.3-89.5-89.5v0
+			c0-49.2,40.3-89.5,89.5-89.5H852.2 M852.2,446H227.8c-24.6,0-47.8,9.6-65.3,27.2s-27.2,40.7-27.2,65.3c0,24.6,9.6,47.8,27.2,65.3
+			s40.7,27.2,65.3,27.2h624.4c24.6,0,47.8-9.6,65.3-27.2s27.2-40.7,27.2-65.3c0-24.6-9.6-47.8-27.2-65.3S876.8,446,852.2,446
+			L852.2,446z"/>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#Adobe_OpacityMaskFilter);}
+	.st1{mask:url(#SVGID_1_);}
+	.st2{fill:#FF00FF;}
+	.st3{fill:url(#SVGID_2_);}
+	.st4{fill:#662D91;}
+</style>
+<g>
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="48" y="358.5" width="984" height="363">
+			<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+			<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="48" y="358.5" width="984" height="363" id="SVGID_1_">
+		<g class="st0">
+			<image style="overflow:visible;" width="990" height="370" xlink:href="FFF3B501.jpg"  transform="matrix(1 0 0 1 45 355)">
+			</image>
+		</g>
+	</mask>
+	<g class="st1">
+		<path class="st2" d="M850.5,721.5h-621C129.7,721.5,48,639.8,48,540v0c0-99.8,81.7-181.5,181.5-181.5h621
+			c99.8,0,181.5,81.7,181.5,181.5v0C1032,639.8,950.3,721.5,850.5,721.5z"/>
+	</g>
+</g>
+<g>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="420.1107" y1="747.6544" x2="659.8895" y2="332.3452">
+		<stop  offset="0" style="stop-color:#480054"/>
+		<stop  offset="0.9944" style="stop-color:#510054"/>
+	</linearGradient>
+	<path class="st3" d="M237,628.3c-48.7,0-88.3-39.6-88.3-88.3s39.6-88.3,88.3-88.3h606c48.7,0,88.3,39.6,88.3,88.3
+		s-39.6,88.3-88.3,88.3H237z"/>
+	<path class="st4" d="M843,453.2c47.7,0,86.8,39.1,86.8,86.8v0c0,47.7-39.1,86.8-86.8,86.8H237c-47.7,0-86.8-39.1-86.8-86.8v0
+		c0-47.7,39.1-86.8,86.8-86.8H843 M843,450.2H237c-23.9,0-46.4,9.4-63.4,26.4c-17,17-26.4,39.5-26.4,63.4c0,23.9,9.4,46.4,26.4,63.4
+		c17,17,39.5,26.4,63.4,26.4h606c23.9,0,46.4-9.4,63.4-26.4c17-17,26.4-39.5,26.4-63.4c0-23.9-9.4-46.4-26.4-63.4
+		C889.4,459.6,866.9,450.2,843,450.2L843,450.2z"/>
+</g>
+</svg>
