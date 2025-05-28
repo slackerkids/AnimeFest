@@ -266,6 +266,8 @@ img {
   position: relative;
   color: white;
   text-align: center;
+  justify-content: center;     /* Центрирует по горизонтали */
+  align-items: center; 
   
 }
 @media (max-width: 768px) {
