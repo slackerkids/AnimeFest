@@ -599,33 +599,68 @@ body {
   color: white;
 }
 
+.custom-arrow {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 
 .swiper {
-  width: 100%;
-  max-width: 900px;
+  width: 250px;
+  max-width: 800px;
   margin: 2rem auto;
 }
-
-.card-slide {
-  background: #2f5b97;
-  border-radius: 20px;
-  padding: 2rem;
-  color: white;
-  text-align: center;
+.custom-arrow img {
+  width: 50px;      /* Ширина стрелки */
+  height: 50px;     /* Высота стрелки */
+  transition: transform 0.2s ease;
 }
 
+/* Повернуть стрелку "назад" на 180 градусов */
+.swiper-button-prev.custom-arrow img {
+  transform: rotate(180deg);
+}
+
+
+
+.card-slide {
+  background: linear-gradient(135deg, #6a00f4, #9c27b0); 
+  border-radius: 20px;
+  padding: 60px 20px 20px;
+  color: white;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  
+
+}
+
+.card {
+  height: 400px;
+  width: 400px;
+}
+
+
 .card-slide img.slide-img {
-  width: 100px;
+  width: 120px;
+
+  margin-top: -10px;
+  height: auto;
   margin-bottom: 1rem;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #6d007f;
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
 }
-
 
 
 
