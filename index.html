@@ -67,13 +67,13 @@
     <div class="content">
       <h1 class="display-4">Anime Fest 2025</h1>
       <p class="lead">Добро пожаловать на самый яркий фестиваль аниме и поп-культуры!</p>
-      <a href="#registration" class="btn btn-ticket">Купить билеты</a>
+      <button type="button" class="btn btn-ticket" data-bs-toggle="modal" data-bs-target="#ticketModal">Купить билеты</button>
   </div>
 </header>
 
 
   <section class="program-section text-center">
-  <h2>Программа</h2>
+  <h2>  Программа</h2>
   <p>Anime Fest 2025 — это пространство, где аниме, косплей и творчество объединяют всех!</p>
 
   <div class="swiper mySwiper">
@@ -167,8 +167,17 @@
   <div class="container text-center">
     <div class="info-box">
       <h2 class="section-title">Сотрудничество</h2>
-      <p class="section-subtitle">Присоединяйтесь к фестивалю как продавец, партнёр или инвестор!</p>
+      <p class="section-subtitle">Присоединяйтесь к фестивалю как продавец, партнёр или спонсор!</p>
+    </div>
+
+    <div class="sponsor-card">
+      <h2 class="sponsor-title">Спонсоринг</h2>
+      <div class="sponsor-text-partners">
+        Поддержите фестиваль
+        и получите эксклюзивные
+        возможности для продвижения.
       </div>
+      <a target="_blank" rel="noopener noreferrer" href="https://wa.me/77064086911?text=Здравствуйте!+Я+хочу+стать+спонсором+фестиваля+Anime+Fest+2025." class="sponsor-btn">Сотрудничать</a>
     </div>
   </div>
 </section>
@@ -178,8 +187,8 @@
 <section id="contact" class="contact-section">
   <div class="container text-center">
     <div class="info-box">
-      <h2 class="section-title">Наши партнеры</h2>
-      <p class="section-subtitle">Спасибо тем, кто помогает фестивалю быть круче!</p>
+      <h2 class="section-title-partners">Наши партнеры</h2>
+      <p class="section-subtitle-partners">Спасибо тем, кто помогает фестивалю быть круче!</p>
     </div>
   </div>
 
@@ -191,6 +200,76 @@
 
 </section>
 
+  <!-- Ticket Purchase Modal -->
+  <div class="modal fade" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ticketModalLabel">Покупка билетов</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <form id="ticketForm" novalidate>
+            <div class="mb-3">
+              <label for="userName" class="form-label">Имя</label>
+              <input type="text" class="form-control" id="userName" name="name" required minlength="3" maxlength="50" placeholder="Наруто Узумаки">
+              <div class="invalid-feedback" id="nameError"></div>
+            </div>
+            <div class="mb-3">
+              <label for="userPhone" class="form-label">Телефон</label>
+              <input type="tel" class="form-control" id="userPhone" name="phone" required 
+                     pattern="^[\+]?[0-9\s\-\(\)]{10,15}$" 
+                     placeholder="+7 700 123 45 67">
+              <div class="invalid-feedback" id="phoneError"></div>
+            </div>
+            <div class="mb-3">
+              <label for="ticketType" class="form-label">Тип билета</label>
+              <select class="form-select" id="ticketType" name="ticket_type" required>
+                <option value="">Выберите тип билета</option>
+                <option value="1_day">1 день (2500тг)</option>
+                <option value="2_day">2 день (2800тг)</option>
+                <option value="both_days">Оба дня (4500тг)</option>
+              </select>
+              <div class="invalid-feedback" id="ticketError"></div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+          <button type="button" class="btn btn-primary" id="submitTicketForm">Купить билет</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QR Code Modal -->
+  <div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="qrModalLabel">Оплата билета</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p>Отсканируйте QR-код для оплаты билета или перейдите по ссылке</p>
+          <!-- We need to show there the value what user select in the form -->
+          <div id="ticketInfo" class="mb-3 p-3 bg-light rounded">
+            <h6 class="mb-2">Информация о билете:</h6>
+            <p class="mb-1"><strong>Имя:</strong> <span id="selectedName"></span></p>
+            <p class="mb-1"><strong>Телефон:</strong> <span id="selectedPhone"></span></p>
+            <p class="mb-1"><strong>Тип билета:</strong> <span id="selectedTicketType"></span></p>
+            <p class="mb-0"><strong>Стоимость:</strong> <span id="ticketPrice"></span></p>
+          </div>
+          <a href="https://pay.kaspi.kz/pay/5ujvq3ak" target="_blank" rel="noopener noreferrer" class="btn btn-success" style="margin: 10px;">Перейти к оплате</a>
+          <img src="qr.png" alt="QR код для оплаты" class="img-fluid" style="max-width: 400px;">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Готово</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   
   
 
@@ -200,6 +279,174 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Ticket prices
+    const ticketPrices = {
+      '1_day': '2500 тенге',
+      '2_day': '2800 тенге', 
+      'both_days': '4500 тенге'
+    };
+    
+    // Ticket type labels
+    const ticketTypeLabels = {
+      '1_day': '1 день (28 июня)',
+      '2_day': '2 день (29 июня)',
+      'both_days': 'Оба дня (28-29 июня)'
+    };
+    
+    // Form validation functions
+    function validateName(name) {
+      const nameInput = document.getElementById('userName');
+      const nameError = document.getElementById('nameError');
+      
+      if (!name || name.trim().length < 3) {
+        nameError.textContent = 'Имя должно содержать минимум 3 символа';
+        nameInput.classList.add('is-invalid');
+        return false;
+      }
+      
+      if (name.trim().length > 50) {
+        nameError.textContent = 'Имя не должно превышать 50 символов';
+        nameInput.classList.add('is-invalid');
+        return false;
+      }
+      
+      nameInput.classList.remove('is-invalid');
+      nameInput.classList.add('is-valid');
+      return true;
+    }
+    
+    function validatePhone(phone) {
+      const phoneInput = document.getElementById('userPhone');
+      const phoneError = document.getElementById('phoneError');
+      const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,15}$/;
+      
+      if (!phone) {
+        phoneError.textContent = 'Телефон обязателен для заполнения';
+        phoneInput.classList.add('is-invalid');
+        return false;
+      }
+      
+      if (!phoneRegex.test(phone)) {
+        phoneError.textContent = 'Введите корректный номер телефона';
+        phoneInput.classList.add('is-invalid');
+        return false;
+      }
+      
+      phoneInput.classList.remove('is-invalid');
+      phoneInput.classList.add('is-valid');
+      return true;
+    }
+    
+    function validateTicketType(ticketType) {
+      const ticketInput = document.getElementById('ticketType');
+      const ticketError = document.getElementById('ticketError');
+      
+      if (!ticketType) {
+        ticketError.textContent = 'Выберите тип билета';
+        ticketInput.classList.add('is-invalid');
+        return false;
+      }
+      
+      ticketInput.classList.remove('is-invalid');
+      ticketInput.classList.add('is-valid');
+      return true;
+    }
+    
+    // Clear validation on input
+    document.getElementById('userName').addEventListener('input', function() {
+      if (this.classList.contains('is-invalid')) {
+        this.classList.remove('is-invalid');
+      }
+    });
+    
+    document.getElementById('userPhone').addEventListener('input', function() {
+      if (this.classList.contains('is-invalid')) {
+        this.classList.remove('is-invalid');
+      }
+    });
+    
+    document.getElementById('ticketType').addEventListener('change', function() {
+      if (this.classList.contains('is-invalid')) {
+        this.classList.remove('is-invalid');
+      }
+    });
+    
+    // Handle ticket form submission
+    document.getElementById('submitTicketForm').addEventListener('click', function() {
+      const form = document.getElementById('ticketForm');
+      const formData = new FormData(form);
+      
+      // Get form values
+      const name = formData.get('name');
+      const phone = formData.get('phone');
+      const ticketType = formData.get('ticket_type');
+      
+      // Validate form
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      
+      // Enhanced custom validation
+      const isNameValid = validateName(name);
+      const isPhoneValid = validatePhone(phone);
+      const isTicketValid = validateTicketType(ticketType);
+      
+      if (!isNameValid || !isPhoneValid || !isTicketValid) {
+        return;
+      }
+      
+      // Update QR modal with selected information
+      document.getElementById('selectedName').textContent = name;
+      document.getElementById('selectedPhone').textContent = phone;
+      document.getElementById('selectedTicketType').textContent = ticketTypeLabels[ticketType] || ticketType;
+      document.getElementById('ticketPrice').textContent = ticketPrices[ticketType] || 'Цена уточняется';
+      
+      // Send data to Google Form
+      submitToGoogleForm(name, phone, ticketType);
+      
+      // Close first modal
+      const ticketModal = bootstrap.Modal.getInstance(document.getElementById('ticketModal'));
+      ticketModal.hide();
+      
+      // Show QR modal after first modal is hidden
+      document.getElementById('ticketModal').addEventListener('hidden.bs.modal', function() {
+        const qrModal = new bootstrap.Modal(document.getElementById('qrModal'));
+        qrModal.show();
+      }, { once: true });
+    });
+    
+    // Function to submit data to Google Form
+    function submitToGoogleForm(name, phone, ticketType) {
+      const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLScnw9b4c0jqXNuxSBxlWYJwHiI9jsXVVLgIEbHgeiV3cuogkw/formResponse';
+      
+      // Map ticket types to Google Form values
+      const ticketTypeMapping = {
+        '1_day': '1 день (2500тг)',
+        '2_day': '2 день (2800тг)', 
+        'both_days': 'Оба дня (4500тг)'
+      };
+      
+      // Create form data for Google Form
+      const formData = new FormData();
+      formData.append('entry.1161135254', name);
+      formData.append('entry.989674010', phone);
+      formData.append('entry.1412757372', ticketTypeMapping[ticketType]); 
+      
+      // Submit to Google Form
+      fetch(googleFormURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      }).then(() => {
+        console.log('Форма отправлена успешно');
+      }).catch((error) => {
+        console.log('Форма отправлена (no-cors mode)');
+      });
+    }
+  </script>
   
 </body>
 </html>

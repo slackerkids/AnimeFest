@@ -1,4 +1,3 @@
-
 .custom-navbar {
   background: black;
   position: sticky;
@@ -338,12 +337,19 @@ img {
  
 
 .participants-section {
-  background: linear-gradient(to right, #fff3e0, #ffe0b2);
+  background: #fff;  /* Change to white background */
   padding: 80px 20px;
   position: relative;
 }
 
 .section-title {
+  font-size: 36px;
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-title-partners {
   font-size: 36px;
   color: #ffffff;
   font-weight: bold;
@@ -352,9 +358,16 @@ img {
 
 .section-subtitle {
   font-size: 18px;
-  color: #fcfcfc;
+  color: #222;
   margin-bottom: 40px;
 }
+
+.section-subtitle-partners {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
 
 .participant-card {
   background: #fff8f5;
@@ -446,7 +459,19 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-position: 80% center;
+    text-align: left;
+  }
   
+  .hero .content {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 40%;
+  }
 }
 
   .hero .overlay {
@@ -500,11 +525,11 @@ body {
   font-size: 1.1rem;
   padding: 12px 32px;
   border: none;
-  border-radius: 40px;
   border-color: #050106;
   text-decoration: none;
   display: inline-block;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 1000rem;
 }
 
 .btn-ticket:hover {
@@ -681,41 +706,63 @@ body {
   color: #ffffff;
 }
 
-.korean-logo {
-  border-radius: 100%;
-   width: 200px;         /* Сделать больше */
-  height: 200px;
-  object-fit: cover;
-  border: 4px solid white;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 40px auto;
+  max-width: 100%;
+  padding: 0 20px;
 }
 
 .aqtobhub-logo {
   width: 400px;
   height: 400px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .shodim-logo {
   width: 250px;
   height: 250px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-
-.logos {
-   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  margin-top: 40px;
-  
+.korean-logo {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
+
 @media (max-width: 768px) {
   .logos {
-    flex-direction: column;
-    align-items: center;
+    gap: 30px;
+    padding: 0 15px;
+  }
+  
+  .aqtobhub-logo {
+    max-width: 90%;
+  }
+  
+  .shodim-logo {
+    max-width: 80%;
+  }
+  
+  .korean-logo {
+    max-width: 70%;
   }
 }
+
 .logo {
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -729,4 +776,265 @@ body {
     padding: 20px ;
     text-align: center;
     font-weight: 500;
+}
+
+/* Ticket Modal Styling - Glassmorphic Design */
+.modal-content {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem 2rem;
+}
+
+.modal-title {
+    color: #d84315;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem 2rem;
+}
+
+/* Form Styling */
+.form-label {
+    color: #35063d;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(211, 67, 21, 0.2);
+    border-radius: 12px;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: #d84315;
+    box-shadow: 0 0 0 0.2rem rgba(216, 67, 21, 0.2);
+    outline: none;
+}
+
+/* Modal Buttons */
+.modal .btn-primary {
+    background: linear-gradient(135deg, #d84315, #ff6f00);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.modal .btn-primary:hover {
+    background: linear-gradient(135deg, #bf360c, #e65100);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(216, 67, 21, 0.3);
+}
+
+.modal .btn-secondary {
+    background: rgba(47, 91, 151, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.modal .btn-secondary:hover {
+    background: rgba(47, 91, 151, 1);
+    transform: translateY(-2px);
+}
+
+.modal .btn-success {
+    background: linear-gradient(135deg, #35063d, #2f5b97);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.modal .btn-success:hover {
+    background: linear-gradient(135deg, #2f0536, #264a7f);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(53, 6, 61, 0.3);
+}
+
+/* QR Modal specific styling */
+#qrModal .modal-body {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+#qrModal .modal-body p {
+    color: #35063d;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+#qrModal .modal-body img {
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.modal .btn-close::before {
+    content: "×" !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #d84315 !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    line-height: 1 !important;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+    background-color: rgba(53, 6, 61, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Ticket Information Section */
+#ticketInfo {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(216, 67, 21, 0.2);
+    border-radius: 15px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#ticketInfo h6 {
+    color: #d84315;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#ticketInfo p {
+    color: #35063d;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+#ticketInfo span {
+    color: #2f5b97;
+    font-weight: 600;
+}
+
+/* Form Validation Styling */
+.form-control.is-invalid, .form-select.is-invalid {
+    border-color: #dc3545;
+    background: rgba(220, 53, 69, 0.1);
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.form-control.is-valid, .form-select.is-valid {
+    border-color: #28a745;
+    background: rgba(40, 167, 69, 0.1);
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.invalid-feedback {
+    display: block;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    font-weight: 500;
+}
+
+.form-control:focus.is-invalid, .form-select:focus.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.form-control:focus.is-valid, .form-select:focus.is-valid {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.sponsor-card {
+  background: linear-gradient(90deg, #5e35b1, #3949ab);  /* Updated gradient */
+  border-radius: 25px;
+  padding: 40px 30px;
+  margin: 30px auto;
+  max-width: 500px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.sponsor-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sponsor-text-partners {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sponsor-btn {
+  display: inline-block;
+  background-color: white;
+  color: #5e35b1;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 15px 50px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.sponsor-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .sponsor-card {
+    margin: 20px 15px;
+    padding: 30px 20px;
+  }
+
+  .sponsor-title {
+    font-size: 2.5rem;
+  }
+
+  .sponsor-text {
+    font-size: 1.5rem;
+  }
+
+  .sponsor-btn {
+    padding: 12px 40px;
+    font-size: 1.2rem;
+  }
 }
