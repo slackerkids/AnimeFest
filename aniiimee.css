@@ -258,7 +258,7 @@ img {
   flex-wrap: wrap;
   width: 100%;
   min-height: 950px;
-  background-image: url('images/pic_6.png'); /* ← путь к твоей картинке */
+  background-image: url('pic_6.png'); /* ← путь к твоей картинке */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; /* если нужен эффект параллакса */
@@ -272,7 +272,7 @@ img {
 }
 @media (max-width: 768px) {
   .split-section {
-    background-image: url('images/pic_6.png'); /* фон для телефонов */
+    background-image: url('pic_6.png'); /* фон для телефонов */
     background-position: top;
   }
 }
@@ -433,7 +433,7 @@ body {
 .hero {
   position: relative;
   height: 100vh;
-  background: url('images/pic_7.png') center center/cover no-repeat;
+  background: url('pic_7.png') center center/cover no-repeat;
   color: white;
   text-align: center;
   display: flex;
@@ -647,7 +647,7 @@ body {
    min-height: 700px;
   padding: 80px 20px;
   border-top: 4px solid #fff8f5;
-  background: url('images/pic_5.png') center center/cover no-repeat;
+  background: url('pic_5.png') center center/cover no-repeat;
   
 }
 
