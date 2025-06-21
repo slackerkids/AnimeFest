@@ -139,25 +139,15 @@
   
   
 
-  <section class="split-section">
+   <section class="split-section">
     <div class="split-left">
       <div class="split-content">
         <h2>Для участников</h2>
         <p>Прими участие в шоу-программе, мастер-классах и выставке. Твоя сцена — это Anime Fest 2025!</p>
         <p><strong>Дата:</strong> 28-29 Июнь 2025<br><strong>Место:</strong> Актобе, ТЦ Илек</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScD0fS_CodDws5NjKj2fWRV2yW_wUGQWcDL8I0kjI7dAANdXQ/viewform?usp=header" 
-   class="apply-button" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   Для косплееров
-</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScD0fS_CodDws5NjKj2fWRV2yW_wUGQWcDL8I0kjI7dAANdXQ/viewform?usp=header" 
-   class="apply-button" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   Для ярморок
-</a>
-
+        <button type="button" class="apply-button" data-bs-toggle="modal" data-bs-target="#registrationModal">
+          Для участия
+        </button>
       </div>
     </div>
   
@@ -167,6 +157,30 @@
 <script>
   AOS.init();
 </script>
+
+
+  <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registrationModalLabel">Регистрация участников</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Выберите категорию для регистрации:</p>
+        <div class="list-group">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScD0fS_CodDws5NjKj2fWRV2yW_wUGQWcDL8I0kjI7dAANdXQ/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action custom-list-item">Для косплееров</a>
+          <a href="https://forms.gle/sq6gLUAt66ugSqMh6" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action custom-list-item">Для ярмарок</a>
+          <a href="https://forms.gle/rmvfjGzpuEuecRjX7" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action custom-list-item">Милый мастер-класс</a>
+          <a href="https://forms.gle/eobMtLkgZmAaF56i8" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action custom-list-item">мастер-класс «Магия росписи»</a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- ИСПРАВЛЕННАЯ ВЕРСТКА БЛОКА "ДЛЯ УЧАСТНИКОВ" С РОВНЫМИ КАРТОЧКАМИ -->
 <section id="registration" class="participants-section">
